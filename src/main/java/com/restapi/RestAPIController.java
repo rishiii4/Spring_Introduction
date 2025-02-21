@@ -29,4 +29,10 @@ public class RestAPIController {
         return "Hello "+ user.getFirstName() +" "+ user.getLastName()+"!";
     }
 
+    // REST Call to show Hello Mark Taylor using PUT method
+    @PutMapping("/hello/put/{firstName}")
+    public String sayName(@PathVariable String firstName, @RequestParam String lastName){
+        return "Hello "+firstName+" "+lastName+"!";
+    }
+
 }
